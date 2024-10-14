@@ -1,0 +1,12 @@
+.container{
+    display: flex; 
+    height: 100vh;
+}
+.form-section{
+    flex: 1; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
