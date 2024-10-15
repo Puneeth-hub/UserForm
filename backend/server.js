@@ -13,12 +13,12 @@ const app = express();
 app.use(express.json());
 
 // Use CORS middleware
-app.use(cors());
-// app.use(cors({
-//     origin: 'https://userform-frontend.vercel.app',
-//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
-//     allowedHeaders: ['Content-Type', 'Authorization'] 
-// }));
+// app.use(cors());
+app.use(cors({
+    origin: 'https://userform-frontend.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+    allowedHeaders: ['Content-Type', 'Authorization'] 
+}));
 
 
 const port = process.env.PORT || 5000;
