@@ -10,7 +10,7 @@ const DataDisplay = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://userform-server.onrender.com/api/items'); 
+                const response = await axios.get('http://localhost:5000/api/items'); 
                 setItems(response.data); 
                 console.log(response.data);
             } catch (error) {
