@@ -13,7 +13,10 @@ const app = express();
 app.use(express.json());
 
 // Use CORS middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5173' 
+}));
 
 const port = process.env.PORT || 5000;
 
