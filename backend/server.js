@@ -15,10 +15,14 @@ app.use(express.json());
 // Use CORS middleware
 // app.use(cors());
 app.use(cors({
-    origin: 'https://userform-frontend.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    origin: [
+        'http://localhost:5173', // Your local development server
+        'https://userform-frontend.vercel.app' // Your Vercel production URL
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'] // Specify allowed headers if needed
 }));
+
 
 const port = process.env.PORT || 5000;
 
